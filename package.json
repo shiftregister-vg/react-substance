@@ -1,6 +1,6 @@
 {
   "name": "react-substance",
-  "version": "1.0.0",
+  "version": "0.0.1-Alpha",
   "description": "A React implementation of the Substance editor library.",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/stevegood/react-substance/issues"
   },
-  "homepage": "https://github.com/stevegood/react-substance#readme"
+  "homepage": "https://github.com/stevegood/react-substance#readme",
+  "dependencies": {
+    "react": "^0.13.3",
+    "substance": "^1.0.0-beta"
+  }
 }
