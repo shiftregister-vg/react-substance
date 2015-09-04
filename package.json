@@ -1,8 +1,8 @@
 {
   "name": "react-substance",
-  "version": "0.0.1-Alpha",
+  "version": "0.0.5-Alpha",
   "description": "A React implementation of the Substance editor library.",
-  "main": "dist/react-substance.js",
+  "main": "./dist",
   "scripts": {
     "build": "webpack -v",
     "test": "echo \"Error: no test specified\" && exit 1"

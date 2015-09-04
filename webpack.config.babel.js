@@ -7,10 +7,10 @@ var Clean = require('clean-webpack-plugin');
 var ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
-  entry: path.resolve(ROOT_PATH, './index.js'),
+  entry: path.resolve(ROOT_PATH, 'src/index.js'),
   output: {
     path: path.resolve(ROOT_PATH, 'dist'),
-    filename: 'react-substance.js'
+    filename: 'index.js'
   },
   devtool: 'source-map',
   module: {

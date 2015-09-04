@@ -1,31 +1,31 @@
-var React = require('react');
-var Editor = require('substance/ui/editor');
-var Component = require('substance/ui/component');
-var $$ = Component.$$;
+import React from 'react';
+import Editor from 'substance/ui/editor';
+import Component from 'substance/ui/component';
 
-var SubstanceEditor = React.createClass({
-  componentWillMount: function() {
-    this.setState({
+let $$ = Component.$$;
+
+export default class SubstanceEditor extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       contentEditor: null
-    })
-  },
+    };
+  }
 
-  componentDidMount: function() {
+  componentDidMount() {
     var container = this.refs.substance_editor;
     this.setState({
       contentEditor: Component.mount($$(SubstanceEditor, {
         content: this.props.initialValue || ''
       }), container)
     });
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <div className="substance-editor" ref="substance_editor">
         Loading editor...
       </div>
     );
   }
-});
-
-module.exports = SubstanceEditor;
+};
