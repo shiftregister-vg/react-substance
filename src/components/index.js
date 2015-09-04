@@ -1,5 +1,5 @@
-var Editor = require('./editor.jsx');
+var SubstanceEditor = require('./substance-editor.jsx');
 
 module.exports = {
-  Editor: Editor
+  SubstanceEditor: SubstanceEditor
 };

@@ -1,9 +1,9 @@
 var React = require('react');
-var SubstanceEditor = require('substance/ui/editor');
+var Editor = require('substance/ui/editor');
 var Component = require('substance/ui/component');
 var $$ = Component.$$;
 
-var Editor = React.createClass({
+var SubstanceEditor = React.createClass({
   componentWillMount: function() {
     this.setState({
       contentEditor: null
@@ -15,10 +15,10 @@ var Editor = React.createClass({
     this.setState({
       contentEditor: Component.mount($$(SubstanceEditor, {
         content: this.props.initialValue || ''
-      }), container);
+      }), container)
     });
   },
-  
+
   render: function() {
     return (
       <div className="substance-editor" ref="substance_editor">
@@ -28,4 +28,4 @@ var Editor = React.createClass({
   }
 });
 
-module.exports = Editor;
+module.exports = SubstanceEditor;
