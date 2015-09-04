@@ -1,0 +1,24 @@
+{
+  "name": "react-substance",
+  "version": "1.0.0",
+  "description": "A React implementation of the Substance editor library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevegood/react-substance.git"
+  },
+  "keywords": [
+    "React",
+    "Substance",
+    "Editor"
+  ],
+  "author": "Steve Good",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevegood/react-substance/issues"
+  },
+  "homepage": "https://github.com/stevegood/react-substance#readme"
+}
