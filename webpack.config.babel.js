@@ -7,10 +7,14 @@ var Clean = require('clean-webpack-plugin');
 var ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
-  entry: path.resolve(ROOT_PATH, 'src/index.js'),
+  entry: {
+    'react-substance': path.resolve(ROOT_PATH, 'src/index.js')
+  },
   output: {
     path: path.resolve(ROOT_PATH, 'dist'),
-    filename: 'index.js'
+    filename: '[name].min.js',
+    library: 'ReactSubstance',
+    libraryTarget: 'umd'
   },
   devtool: 'source-map',
   module: {
@@ -29,5 +33,15 @@ module.exports = {
         warnings: false
       }
     })
+  ],
+  externals: [
+    {
+      'react': {
+        root: 'React',
+        commonjs2: 'react',
+        commonjs: 'react',
+        amd: 'react'
+      }
+    }
   ]
 };

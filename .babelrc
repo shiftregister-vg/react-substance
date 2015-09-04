@@ -1,3 +1,5 @@
 {
-  "stage": 1
+  "stage": 1,
+  "optional": ["runtime"],
+  "loose": ["all"]
 }

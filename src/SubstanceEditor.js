@@ -7,18 +7,17 @@ let $$ = Component.$$;
 export default class SubstanceEditor extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      contentEditor: null
+      contentEditor: undefined
     };
   }
 
   componentDidMount() {
-    var container = this.refs.substance_editor;
-    this.setState({
-      contentEditor: Component.mount($$(SubstanceEditor, {
-        content: this.props.initialValue || ''
-      }), container)
-    });
+    const container = this.refs.substance_editor;
+    this.setState({contentEditor: Component.mount($$(Editor, {
+      content: this.props.initialValue || ''
+    }), container)});
   }
 
   render() {
@@ -28,4 +27,4 @@ export default class SubstanceEditor extends React.Component {
       </div>
     );
   }
-};
+}
